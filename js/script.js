@@ -18,7 +18,7 @@ $(function () {
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
             center: location,
-            zoom: 16,
+            zoom: 12,
             panControl: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
