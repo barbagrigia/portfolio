@@ -33,7 +33,7 @@ $(function() {
         });
 
         var contentString = '<div class="info-window">' +
-            '<h3>Saint Petersburg: Northern Venice</h3>' +
+            '<h3>Saint Petersburg: The Northern Venice</h3>' +
             '<div class="info-content">' +
             '<p>Saint Petersburg is one of Russia’s most picturesque cities. Its residents love it to the point of unquestionable adoration.</p>' +
             '</div>' +
