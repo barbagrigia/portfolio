@@ -33,7 +33,7 @@ $(function() {
         });
 
         var contentString = '<div class="info-window">' +
-            '<h4>Saint Petersburg: The Northern Venice</h4>' +
+            '<h5>Saint Petersburg: The Northern Venice</h5>' +
             '<div class="info-content">' +
             '<p>Saint Petersburg is one of Russia’s most picturesque cities. Its residents love it to the point of unquestionable adoration.</p>' +
             '</div>' +
@@ -41,7 +41,7 @@ $(function() {
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
-            maxWidth: 350
+            maxWidth: 400
         });
 
         marker.addListener('click', function() {
