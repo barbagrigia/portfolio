@@ -41,7 +41,7 @@ $(function() {
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
-            maxWidth: 300
+            maxWidth: 350
         });
 
         marker.addListener('click', function() {
