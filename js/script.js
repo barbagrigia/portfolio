@@ -1,15 +1,15 @@
- $(function () { // Same as document.addEventListener("DOMContentLoaded"...
+$(function() { // Same as document.addEventListener("DOMContentLoaded"...
 
-  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-  $("#navbarToggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      $("#collapsable-nav").collapse('hide');
-    }
-  });
+    // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
+    $("#navbarToggle").blur(function(event) {
+        var screenWidth = window.innerWidth;
+        if (screenWidth < 768) {
+            $("#collapsable-nav").collapse('hide');
+        }
+    });
 });
 
-$(function () {
+$(function() {
 
     function initMap() {
 
@@ -33,22 +33,95 @@ $(function () {
         });
 
         var contentString = '<div class="info-window">' +
-                '<h3>Info Window Content</h3>' +
-                '<div class="info-content">' +
-                '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
-                '</div>' +
-                '</div>';
+            '<h3>Info Window Content</h3>' +
+            '<div class="info-content">' +
+            '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+            '</div>' +
+            '</div>';
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 400
         });
 
-        marker.addListener('click', function () {
+        marker.addListener('click', function() {
             infowindow.open(map, marker);
         });
-     
-        var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+
+        //var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+        var styles = [{
+            "featureType": "poi",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "stylers": [{
+                "saturation": -70
+            }, {
+                "lightness": 37
+            }, {
+                "gamma": 1.15
+            }]
+        }, {
+            "elementType": "labels",
+            "stylers": [{
+                "gamma": 0.26
+            }, {
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "road",
+            "stylers": [{
+                "lightness": 0
+            }, {
+                "saturation": 0
+            }, {
+                "hue": "#ffffff"
+            }, {
+                "gamma": 0
+            }]
+        }, {
+            "featureType": "road",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{
+                "lightness": 20
+            }]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [{
+                "lightness": 50
+            }, {
+                "saturation": 0
+            }, {
+                "hue": "#ffffff"
+            }]
+        }, {
+            "featureType": "administrative.province",
+            "stylers": [{
+                "visibility": "on"
+            }, {
+                "lightness": -50
+            }]
+        }, {
+            "featureType": "administrative.province",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "administrative.province",
+            "elementType": "labels.text",
+            "stylers": [{
+                "lightness": 20
+            }]
+        }]
         map.set('styles', styles);
     }
 
