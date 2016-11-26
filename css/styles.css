@@ -25,25 +25,15 @@ h6 {
 }
 
 .intro-header {
-    position: absolute;
-    z-index: 99;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
     background: url(http://leblogdecarlos.com/wp-content/uploads/2015/06/Laptop_Pingpong.jpg) no-repeat center center;
     background-size: cover;
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
-    overflow: hidden
 }
 
 .intro-message {
-    position: absolute;
-    z-index: 100;
     position: relative;
     padding-top: 20%;
     padding-bottom: 20%;
@@ -56,8 +46,6 @@ h6 {
 }
 
 .intro-divider {
-    position: absolute;
-    z-index: 100;
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
