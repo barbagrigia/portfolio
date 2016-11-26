@@ -31,6 +31,11 @@ h6 {
     color: #f8f8f8;
     background: url(http://leblogdecarlos.com/wp-content/uploads/2015/06/Laptop_Pingpong.jpg) no-repeat center center;
     background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
 
 .intro-message {
@@ -169,12 +174,4 @@ p.copyright {
 
 .info-content {
     color: #999;
-}
-
-.blur {
-  -webkit-filter: blur(5px);
-     -moz-filter: blur(5px);
-       -o-filter: blur(5px);
-      -ms-filter: blur(5px);
-          filter: blur(5px);
 }
