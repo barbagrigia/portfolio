@@ -34,7 +34,8 @@ h6 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #464646;
+    /*background-color: #464646;*/
+    background-color: rgba(0, 125, 215, 0.7);
 }
 
 .intro-message {
