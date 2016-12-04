@@ -36,15 +36,16 @@ h6 {
     background-size: cover;
     /*background-color: #464646;*/
     background-color: rgba(0, 0, 0, 0.5);
-    filter: opacity(50%);
+    /*filter: opacity(50%);*/
+    opacity: 0.5;
 }
 
 .intro-message {
     position: relative;
     padding-top: 20%;
     padding-bottom: 20%;
-    z-index:10;
-    opacity:1.0;
+    z-index: 10;
+    opacity: 1.0;
 }
 
 .intro-message > h1 {
