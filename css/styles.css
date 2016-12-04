@@ -36,7 +36,7 @@ h6 {
     background-size: cover;
     /*background-color: #464646;*/
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0.55;
+    filter: opacity(50%);
 }
 
 .intro-message {
